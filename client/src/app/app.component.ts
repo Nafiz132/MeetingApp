@@ -18,7 +18,7 @@ import { HomeComponent } from "./home/home.component";
     NavComponent,
     FormsModule,
     BsDropdownModule,
-    HomeComponent
+    HomeComponent,
 ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

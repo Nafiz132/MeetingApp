@@ -4,3 +4,6 @@
 .dropdown-menu, dropdown-item{
     cursor: pointer;
 }
+.nav-item, nav-link{
+    cursor: pointer;
+}
