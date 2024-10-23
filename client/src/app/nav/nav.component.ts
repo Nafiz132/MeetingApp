@@ -32,7 +32,7 @@ export class NavComponent implements OnInit {
         this.toastr.success('Login successful!', 'Welcome')
       },
         
-      error: error => this.toastr.error(error.error)
+      // error: error => this.toastr.error(error.error)
     });
   }
   logout() {

@@ -13,10 +13,8 @@ export const authGuard: CanActivateFn = (route, state) => {
       if (user) {
         return true;
       } else {
-        // toastr.error('access denied!',undefined, {
-        //   timeOut: 1000,
-        //   positionClass: 'toast-bottom-right' 
-        // });
+//         toastr.error('access denied!',undefined, {
+// });
         return false;
       }
     })
