@@ -12,16 +12,12 @@ import { ToastrService } from 'ngx-toastr';
   styleUrl: './register.component.css'
 })
 export class RegisterComponent implements OnInit {
-  // @Input() usersFromHomeComponent:any[]=[];
   @Output() cancelRegister= new EventEmitter();
 
   model:any={}
 
   constructor(private accountService: AccountService, private toastr:ToastrService){}
   ngOnInit(): void {
-    // this.usersFromHomeComponent = this.usersFromHomeComponent.sort((a, b) => 
-    //   a.userName.localeCompare(b.userName)
-    // );
   }
 
   register(){
