@@ -8,9 +8,17 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddApplicationServices(builder.Configuration);
 builder.Services.AddIdentityServices(builder.Configuration);
 builder.Services.AddControllers();
+builder.Services.AddSwaggerGen();
+
 
 
 var app = builder.Build();
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1"));
+}
+
 
 app.UseMiddleware<ExceptionMiddleware>();
 
@@ -35,5 +43,9 @@ try{
     logger.LogError(ex,"An error occured during migration");
     
 }
+app.MapGet("/", context => {
+    context.Response.Redirect("/swagger");
+    return Task.CompletedTask;
+});
 
 app.Run();

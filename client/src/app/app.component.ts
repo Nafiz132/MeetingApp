@@ -9,6 +9,9 @@ import { AccountService } from './_services/account.service';
 import { User } from './_models/User';
 import { HomeComponent } from "./home/home.component";
 import { ToastrService } from 'ngx-toastr';
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { NgxGalleryModule } from '@kolkov/ngx-gallery'
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -20,6 +23,8 @@ import { ToastrService } from 'ngx-toastr';
     FormsModule,
     BsDropdownModule,
     HomeComponent,
+    TabsModule,
+    NgxGalleryModule
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

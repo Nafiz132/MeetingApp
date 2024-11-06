@@ -14,6 +14,7 @@ import { provideClientHydration } from '@angular/platform-browser';
 import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptors } from '@angular/common/http';  // Include this import
 import { provideToastr } from 'ngx-toastr';
 import { errorInterceptor } from './_interceptors/error.interceptor';
+import { jwtInterceptor } from './_interceptors/jwt.interceptor';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -25,7 +26,7 @@ export const appConfig: ApplicationConfig = {
       positionClass: 'toast-bottom-left'
     }),
     provideHttpClient(
-      withInterceptors([errorInterceptor])  // Add the interceptor here
+      withInterceptors([errorInterceptor,jwtInterceptor])  // Add the interceptor here
     ), 
   ]
 };
