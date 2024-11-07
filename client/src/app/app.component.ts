@@ -10,7 +10,9 @@ import { User } from './_models/User';
 import { HomeComponent } from "./home/home.component";
 import { ToastrService } from 'ngx-toastr';
 import { TabsModule } from 'ngx-bootstrap/tabs';
-import { NgxGalleryModule } from '@kolkov/ngx-gallery'
+import { NgxGalleryModule } from '@kolkov/ngx-gallery';
+import { NgxSpinnerModule } from 'ngx-spinner';
+
 
 @Component({
   selector: 'app-root',
@@ -24,7 +26,8 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery'
     BsDropdownModule,
     HomeComponent,
     TabsModule,
-    NgxGalleryModule
+    NgxGalleryModule,
+    NgxSpinnerModule
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
