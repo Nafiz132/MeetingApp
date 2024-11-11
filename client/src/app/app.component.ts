@@ -1,5 +1,4 @@
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
 import { Component, inject, Inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavComponent } from './nav/nav.component';
@@ -12,6 +11,8 @@ import { ToastrService } from 'ngx-toastr';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { HttpClientModule } from '@angular/common/http';
+import { FileUploadModule } from 'ng2-file-upload';
 
 
 @Component({
@@ -19,15 +20,16 @@ import { NgxSpinnerModule } from 'ngx-spinner';
   standalone: true,
   imports: [
     RouterOutlet,
-    HttpClientModule,
     CommonModule,
+    HttpClientModule,
     NavComponent,
     FormsModule,
     BsDropdownModule,
     HomeComponent,
     TabsModule,
     NgxGalleryModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    FileUploadModule
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
